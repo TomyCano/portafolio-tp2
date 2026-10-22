@@ -1,16 +1,43 @@
-# React + Vite
+# Portfolio Personal en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Estudiante
+**Nombre y Apellido:** Tomás Cano
 
-Currently, two official plugins are available:
+## Descripción
+Portfolio personal desarrollado con conceptos aprendidos en clase, utilizando React para crear componentes y React Router DOM para la navegación entre páginas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologías utilizadas
+- React
+- Vite
+- CSS3
+- React Router DOM
 
-## React Compiler
+## Cómo ejecutar el proyecto localmente
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/TomyCano/portafolio-tp2.git
+   ```
 
-## Expanding the ESLint configuration
+2. Ingresar a la carpeta del proyecto:
+   ```bash
+   cd tp2
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Instalar las dependencias:
+   ```bash
+   npm install
+   ```
+
+4. Instalar React Router DOM (si no está incluido en las dependencias):
+   ```bash
+   npm install react-router-dom
+   ```
+
+5. Iniciar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+## Enlace al repositorio
+[Portfolio Personal - GitHub](https://github.com/TomyCano/portafolio-tp2)
