@@ -4,7 +4,7 @@ const Home = ({ persona, profesion }) => (
     <h1>{persona.nombre}</h1>
     <h2>{profesion}</h2>
     <p className="lead">
-      Tengo {persona.edad} anos y estoy aprendiendo a crear paginas y sistemas utiles.
+      Tengo {persona.edad} años y estoy aprendiendo a crear paginas y sistemas utiles.
       Me interesa construir interfaces claras y organizar bien la informacion.
     </p>
     <div className="home-card">
