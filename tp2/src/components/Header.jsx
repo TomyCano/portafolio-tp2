@@ -1,61 +1,55 @@
-import { useState } from "react";
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Header = ({ persona }) => {
-    const [menuAbierto, setMenuAbierto] = useState(false);
+  const [menuAbierto, setMenuAbierto] = useState(false)
 
-    const cerrarMenu = () => {
-        setMenuAbierto(false);
-    };
+  const cerrarMenu = () => setMenuAbierto(false)
 
-    return (
-        <div>
-            <header className="site-header">
+  return (
+    <header className="site-header">
+      <NavLink
+        to="/"
+        className="brand"
+        aria-label={`Ir al inicio de ${persona.nombre}`}
+        onClick={cerrarMenu}
+        end
+      >
+        <span className="brand-mark">TC</span>
+        <span>{persona.nombre}</span>
+      </NavLink>
 
-                <a
-                    className="brand"
-                    href="#inicio"
-                    aria-label={`Ir al inicio de ${persona.nombre}`}
-                >
-                    <span className="brand-mark">TC</span>
-                    <span>{persona.nombre}</span>
-                </a>
+      <button
+        className="menu-button"
+        type="button"
+        aria-label="Abrir navegacion"
+        aria-expanded={menuAbierto}
+        onClick={() => setMenuAbierto(!menuAbierto)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-                <button
-                    className="menu-button"
-                    type="button"
-                    aria-label="Abrir navegación"
-                    aria-expanded={menuAbierto}
-                    onClick={() => setMenuAbierto(!menuAbierto)}
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+      <nav
+        className={`nav-links ${menuAbierto ? 'open' : ''}`}
+        aria-label="Navegacion principal"
+      >
+        <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={cerrarMenu}>
+          Sobre mi
+        </NavLink>
+        <NavLink to="/skills" className={({ isActive }) => isActive ? 'active' : ''} onClick={cerrarMenu}>
+          Habilidades
+        </NavLink>
+        <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''} onClick={cerrarMenu}>
+          Proyectos
+        </NavLink>
+        <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''} onClick={cerrarMenu}>
+          Contacto
+        </NavLink>
+      </nav>
+    </header>
+  )
+}
 
-                <nav
-                    className={`nav-links ${menuAbierto ? "open" : ""}`}
-                    aria-label="Navegación principal"
-                >
-                    <a href="#sobre-mi" onClick={cerrarMenu}>
-                        Sobre mi
-                    </a>
-
-                    <a href="#skills" onClick={cerrarMenu}>
-                        Habilidades
-                    </a>
-
-                    <a href="#proyectos" onClick={cerrarMenu}>
-                        Proyectos
-                    </a>
-
-                    <a href="#contacto" onClick={cerrarMenu}>
-                        Contacto
-                    </a>
-                </nav>
-
-            </header>
-        </div>
-    );
-};
-
-export default Header;
+export default Header

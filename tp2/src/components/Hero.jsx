@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Hero = ({ persona,profesion }) => {
   return (
     <div>
@@ -13,8 +15,8 @@ const Hero = ({ persona,profesion }) => {
           bien la informacion.
         </p>
         <div className="hero-actions">
-          <a className="primary-button" href="#proyectos">Ver mis proyectos</a>
-          <a className="ghost-button" href="#contacto">Contactarme</a>
+          <Link className="primary-button" to="/projects">Ver mis proyectos</Link>
+          <Link className="ghost-button" to="/contact">Contactarme</Link>
         </div>
       </div>
 
